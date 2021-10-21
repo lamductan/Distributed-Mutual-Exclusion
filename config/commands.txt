@@ -1,0 +1,3 @@
+./build/run_server 0 config/config_servers.txt test_data/servers logs &
+./build/run_server 1 config/config_servers.txt test_data/servers logs &
+./build/run_server 2 config/config_servers.txt test_data/servers logs 

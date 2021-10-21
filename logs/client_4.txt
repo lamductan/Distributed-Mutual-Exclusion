@@ -1,0 +1,1761 @@
+Listener at 127.0.0.1 on port 26364 
+n_clients = 5
+New connection, socket fd is 7, ip is : 127.0.0.1, port : 52528
+passive from 0 to 4
+Client 4 connected to Client 0
+New connection, socket fd is 8, ip is : 127.0.0.1, port : 52534
+passive from 1 to 4
+Client 4 connected to Client 1
+New connection, socket fd is 9, ip is : 127.0.0.1, port : 52538
+passive from 2 to 4
+Client 4 connected to Client 2
+New connection, socket fd is 10, ip is : 127.0.0.1, port : 52540
+passive from 3 to 4
+Client 4 connected to Client 3
+Client 4: client_socket = [7 8 9 10 0 ]
+
+I'm gonna reply to server 0
+I'm gonna reply to server 1
+I'm gonna reply to server 2
+Client 4 is sending ENQUIRY request to server 1
+Client 4 received a message from Server 1, content of the packet is:
+Message_type = 6, response = f2.txt#f1.txt
+quorum: [4 0 1 ]
+quorum: [4 0 1 ]
+
+Client 4 ENQUIRY results from Server 1
+f2.txt
+f1.txt
+
+Client 4 received a message from Client 0, content of the packet is:
+	Message from Client 0: Hello this is a text from Client 0 to Client 4
+Client 4 received a message from Client 1, content of the packet is:
+This thread is for Client 4 to handle its self messages
+Client 4 received a message from Client 3, content of the packet is:
+	Message from Client 1: Hello this is a text from Client 1 to Client 4
+	Message from Client 3: Hello this is a text from Client 3 to Client 4
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 3
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: I'm sending LOCKED to Client 3
+Client 4 is doing request from input file test_data/clients/client_4.txt
+READ f1.txt 0
+MKWCAS[f1.txt]: I'm requesting resource, our_sequence_number = 2
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 4
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 0
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 1
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 1
+Client 4 received a message from Client 4, content of the packet is:
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+Receive a distributed mutual exclusion algorithm message: 14 from Client 4
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+MKWCAS[f1.txt]: I'm sending FAILED to Client 4
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 0
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 1
+{
+	packet.message_type = 18
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 0
+	packet.msg = 1#0
+}
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 4
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 4
+{
+	packet.message_type = 18
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 0
+{
+	packet.message_type = 18
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 0#1
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+Client 4 received a message from Client 2, content of the packet is:
+	Message from Client 2: Hello this is a text from Client 2 to Client 4
+Client 4 received a message from Client 2, content of the packet is:
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+Receive a distributed mutual exclusion algorithm message: 14 from Client 2
+MKWCAS[f2.txt]: I'm treating REQUEST message from Client 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 2#1
+}
+MKWCAS[f2.txt]: I'm sending LOCKED to Client 2
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 1
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 1
+{
+	packet.message_type = 15
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 0
+	packet.msg = 1#0
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 3
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 3
+{
+	packet.message_type = 19
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 3#1
+}
+MKWCAS[f1.txt]: I'm sending LOCKED message from Client 4
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 3
+MKWCAS[f2.txt]: I'm treating REQUEST message from Client 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+MKWCAS[f2.txt]: I'm sending FAILED to Client 3
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 4
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 4
+{
+	packet.message_type = 15
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+Client 4 received a message from Client 2, content of the packet is:
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 0
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 0
+{
+	packet.message_type = 15
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 0#3
+}
+Receive a distributed mutual exclusion algorithm message: 19 from Client 2
+MKWCAS[f2.txt]: I'm treating RELEASE message from Client 2
+{
+	packet.message_type = 19
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 1
+	packet.msg = 2#1
+}
+MKWCAS[f2.txt]: I'm sending LOCKED message from Client 3
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 2
+MKWCAS[f1.txt]: Can I enter critical section? Answer is YES. I'm waiting for: []. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+MKWCAS[f1.txt]: I'm entering critical section
+
+**Client 4 is entering critical section
+Client 4 is sending READ request to server 0
+Waiting for READ result from Server 0
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 2#4
+}
+MKWCAS[f1.txt]: I'm sending FAILED to Client 2
+Client 4 received a message from Server 0, content of the packet is:
+Message_type = 7, response = This is f1 file.
+=== n_requested_requests = 1 ===
+
+Client 4 READ result from Server 0
+This is f1 file.
+
+MKWCAS[f1.txt]: I'm releasing resource
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 4
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 0
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 1
+WRITE f2.txt
+MKWCAS[f2.txt]: I'm requesting resource, our_sequence_number = 3
+MKWCAS[f2.txt]: I'm sending REQUEST to Client 4
+MKWCAS[f2.txt]: I'm sending REQUEST to Client 0
+MKWCAS[f2.txt]: I'm sending REQUEST to Client 1
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 0
+MKWCAS[f2.txt]: I'm treating FAILED message from Client 0
+{
+	packet.message_type = 18
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 0
+	packet.msg = 0#0
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 1
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+MKWCAS[f2.txt]: I'm treating LOCKED message from Client 1
+{
+	packet.message_type = 15
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 1#2
+}
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 0
+MKWCAS[f2.txt]: I'm treating LOCKED message from Client 0
+{
+	packet.message_type = 15
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 0
+	packet.msg = 0#0
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 16 from Client 0
+MKWCAS[f2.txt]: I'm treating INQUIRE message from Client 0
+{
+	packet.message_type = 16
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 0
+	packet.msg = 0#0
+}
+MKWCAS[f2.txt]: INQUIRE message: can't determine what to reply because: request_reply = [1 3 3 ]
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 16 from Client 1
+MKWCAS[f2.txt]: I'm treating INQUIRE message from Client 1
+{
+	packet.message_type = 16
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 1#2
+}
+MKWCAS[f2.txt]: INQUIRE message: can't determine what to reply because: request_reply = [1 3 3 ]
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 4
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 4
+{
+	packet.message_type = 19
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 4#2
+}
+Client 4 received a message from Client 3, content of the packet is:
+MKWCAS[f1.txt]: I'm sending LOCKED message from Client 2
+Receive a distributed mutual exclusion algorithm message: 19 from Client 3
+MKWCAS[f2.txt]: I'm treating RELEASE message from Client 3
+{
+	packet.message_type = 19
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+MKWCAS[f2.txt]: INQUIRE message: can't determine what to reply because: request_reply = [1 3 3 ]
+Client 4 received a message from Client 3, content of the packet is:
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 ]. Locking request node = -1
+{
+	packet.message_type = 14
+	packet.sender_id = -1
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 3#2
+}
+Receive a distributed mutual exclusion algorithm message: 14 from Client 3
+MKWCAS[f2.txt]: I'm treating REQUEST message from Client 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+MKWCAS[f2.txt]: I'm sending LOCKED to Client 3
+MKWCAS[f2.txt]: INQUIRE message: can't determine what to reply because: request_reply = [1 3 3 ]
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+MKWCAS[f2.txt]: INQUIRE message: can't determine what to reply because: request_reply = [1 3 3 ]
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 4
+MKWCAS[f2.txt]: I'm treating REQUEST message from Client 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 4#3
+}
+MKWCAS[f2.txt]: I'm sending FAILED to Client 4
+MKWCAS[f2.txt]: INQUIRE message: can't determine what to reply because: request_reply = [1 3 3 ]
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 4
+MKWCAS[f2.txt]: I'm treating FAILED message from Client 4
+{
+	packet.message_type = 18
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 4#3
+}
+MKWCAS[f2.txt]: I'm sending RELINQUISH to Client 1
+MKWCAS[f2.txt]: I'm sending RELINQUISH to Client 0
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 2
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 1
+MKWCAS[f2.txt]: I'm treating LOCKED message from Client 1
+{
+	packet.message_type = 15
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 2
+	packet.msg = 1#2
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 2
+{
+	packet.message_type = 19
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 2#4
+}
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 2
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 5
+	packet.msg = 2#5
+}
+MKWCAS[f1.txt]: I'm sending LOCKED to Client 2
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 ]. Locking request node = 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 3
+MKWCAS[f2.txt]: I'm treating RELEASE message from Client 3
+{
+	packet.message_type = 19
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 3#3
+}
+MKWCAS[f2.txt]: I'm sending LOCKED message from Client 4
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 0
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 4
+MKWCAS[f2.txt]: I'm treating LOCKED message from Client 0
+{
+	packet.message_type = 15
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 0
+	packet.msg = 0#0
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 4#3
+}
+MKWCAS[f2.txt]: I'm treating LOCKED message from Client 4
+{
+	packet.message_type = 15
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 4#3
+}
+MKWCAS[f2.txt]: Can I enter critical section? Answer is YES. I'm waiting for: []. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 4#3
+}
+MKWCAS[f2.txt]: I'm entering critical section
+
+**Client 4 is entering critical section
+Waiting for WRITE result
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 2
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 2
+{
+	packet.message_type = 19
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 5
+	packet.msg = 2#5
+}
+Client 4 received a message from Server 1, content of the packet is:
+Client 4 received a message from Server 2, content of the packet is:
+Server 2 done writing line [4,36] to file f2.txt
+
+Server 1 done writing line [4,36] to file f2.txt
+
+Client 4 received a message from Server 0, content of the packet is:
+Server 0 done writing line [4,36] to file f2.txt
+
+=== n_requested_requests = 2 ===
+MKWCAS[f2.txt]: I'm releasing resource
+MKWCAS[f2.txt]: I'm sending RELEASE to Client 4
+MKWCAS[f2.txt]: I'm sending RELEASE to Client 0
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 4
+MKWCAS[f2.txt]: I'm sending RELEASE to Client 1
+MKWCAS[f2.txt]: I'm treating RELEASE message from Client 4
+{
+	packet.message_type = 19
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 3
+	packet.msg = 4#3
+}
+WRITE f1.txt
+MKWCAS[f1.txt]: I'm requesting resource, our_sequence_number = 6
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 4
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 0
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 1
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = -1
+{
+	packet.message_type = 14
+	packet.sender_id = -1
+	packet.receiver_id = 4
+	packet.timestamp = 5
+	packet.msg = 2#5
+}
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 4
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: I'm sending LOCKED to Client 4
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 4
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 4
+{
+	packet.message_type = 15
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 2
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 3
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 2#6
+}
+MKWCAS[f2.txt]: I'm treating REQUEST message from Client 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 3#4
+}
+MKWCAS[f1.txt]: I'm sending INQUIRE to Client 4
+MKWCAS[f2.txt]: I'm sending LOCKED to Client 3
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 16 from Client 4
+MKWCAS[f1.txt]: I'm treating INQUIRE message from Client 4
+{
+	packet.message_type = 16
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: INQUIRE message: can't determine what to reply because: request_reply = [3 1 1 ]
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: INQUIRE message: can't determine what to reply because: request_reply = [3 1 1 ]
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: INQUIRE message: can't determine what to reply because: request_reply = [3 1 1 ]
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 3
+MKWCAS[f2.txt]: I'm treating RELEASE message from Client 3
+{
+	packet.message_type = 19
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 3#4
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 3
+MKWCAS[f2.txt]: I'm treating REQUEST message from Client 3
+{
+	packet.message_type = 14
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 5
+	packet.msg = 3#5
+}
+MKWCAS[f2.txt]: I'm sending LOCKED to Client 3
+MKWCAS[f1.txt]: INQUIRE message: can't determine what to reply because: request_reply = [3 1 1 ]
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 1
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 0
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 1
+{
+	packet.message_type = 18
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 1#4
+}
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 0
+{
+	packet.message_type = 18
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 0#4
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: I'm sending RELINQUISH to Client 4
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 17 from Client 4
+MKWCAS[f1.txt]: I'm treating RELINQUISH message from Client 4
+{
+	packet.message_type = 17
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: I'm sending LOCKED to Client 2
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 2#6
+}
+Client 4 received a message from Client 3, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 3
+MKWCAS[f2.txt]: I'm treating RELEASE message from Client 3
+{
+	packet.message_type = 19
+	packet.sender_id = 3
+	packet.receiver_id = 4
+	packet.timestamp = 5
+	packet.msg = 3#5
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 2#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 2#6
+}
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 2
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 2
+{
+	packet.message_type = 19
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 2#6
+}
+MKWCAS[f1.txt]: I'm sending LOCKED message from Client 4
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 4
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 4
+{
+	packet.message_type = 15
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 2
+MKWCAS[f2.txt]: I'm treating REQUEST message from Client 2
+{
+	packet.message_type = 14
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 2#7
+}
+MKWCAS[f2.txt]: I'm sending LOCKED to Client 2
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+Client 4 received a message from Client 2, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 2
+MKWCAS[f2.txt]: I'm treating RELEASE message from Client 2
+{
+	packet.message_type = 19
+	packet.sender_id = 2
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 2#7
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 1
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 1
+{
+	packet.message_type = 15
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 1#4
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 0
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 0
+{
+	packet.message_type = 15
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 4
+	packet.msg = 0#4
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is YES. I'm waiting for: []. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+MKWCAS[f1.txt]: I'm entering critical section
+
+**Client 4 is entering critical section
+Waiting for WRITE result
+Client 4 received a message from Server 0, content of the packet is:
+Client 4 received a message from Server 1, content of the packet is:
+Server 0 done writing line [4,54] to file f1.txt
+
+Server 1 done writing line [4,54] to file f1.txt
+
+Client 4 received a message from Server 2, content of the packet is:
+Server 2 done writing line [4,54] to file f1.txt
+
+=== n_requested_requests = 3 ===
+MKWCAS[f1.txt]: I'm releasing resource
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 4
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 0
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 1
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 4
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 4
+{
+	packet.message_type = 19
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+READ f1.txt 0
+MKWCAS[f1.txt]: I'm requesting resource, our_sequence_number = 7
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 4
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 0
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 1
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = -1
+{
+	packet.message_type = 14
+	packet.sender_id = -1
+	packet.receiver_id = 4
+	packet.timestamp = 6
+	packet.msg = 4#6
+}
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 4
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 0
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 1
+MKWCAS[f1.txt]: I'm sending LOCKED to Client 4
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 0
+{
+	packet.message_type = 18
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 0#7
+}
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 1
+{
+	packet.message_type = 18
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 1#7
+}
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 4
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 4
+{
+	packet.message_type = 15
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 0
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [0 1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 0
+{
+	packet.message_type = 15
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 0#7
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 1
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 1
+{
+	packet.message_type = 15
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 1#7
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is YES. I'm waiting for: []. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+MKWCAS[f1.txt]: I'm entering critical section
+
+**Client 4 is entering critical section
+Client 4 is sending READ request to server 0
+Waiting for READ result from Server 0
+Client 4 received a message from Server 0, content of the packet is:
+Message_type = 7, response = 1,65
+
+Client 4 READ result from Server 0
+1,65
+
+=== n_requested_requests = 4 ===
+MKWCAS[f1.txt]: I'm releasing resource
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 4
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 0
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 1
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 4
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 4
+{
+	packet.message_type = 19
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+WRITE f1.txt
+MKWCAS[f1.txt]: I'm requesting resource, our_sequence_number = 8
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 4
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 0
+MKWCAS[f1.txt]: I'm sending REQUEST to Client 1
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [4 0 1 ]. Locking request node = -1
+{
+	packet.message_type = 14
+	packet.sender_id = -1
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 4#7
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 18 from Client 1
+Client 4 received a message from Client 0, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 0
+MKWCAS[f1.txt]: I'm treating FAILED message from Client 1
+{
+	packet.message_type = 18
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 8
+	packet.msg = 1#8
+}
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 0
+{
+	packet.message_type = 15
+	packet.sender_id = 0
+	packet.receiver_id = 4
+	packet.timestamp = 7
+	packet.msg = 0#7
+}
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 14 from Client 4
+MKWCAS[f1.txt]: I'm treating REQUEST message from Client 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 8
+	packet.msg = 4#8
+}
+MKWCAS[f1.txt]: I'm sending LOCKED to Client 4
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 4
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 4
+{
+	packet.message_type = 15
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 8
+	packet.msg = 4#8
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is NO. I'm waiting for: [1 ]. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 8
+	packet.msg = 4#8
+}
+Client 4 received a message from Client 1, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 15 from Client 1
+MKWCAS[f1.txt]: I'm treating LOCKED message from Client 1
+{
+	packet.message_type = 15
+	packet.sender_id = 1
+	packet.receiver_id = 4
+	packet.timestamp = 8
+	packet.msg = 1#8
+}
+MKWCAS[f1.txt]: Can I enter critical section? Answer is YES. I'm waiting for: []. Locking request node = 4
+{
+	packet.message_type = 14
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 8
+	packet.msg = 4#8
+}
+MKWCAS[f1.txt]: I'm entering critical section
+
+**Client 4 is entering critical section
+Waiting for WRITE result
+Client 4 received a message from Server 1, content of the packet is:
+Server 1 done writing line [4,73] to file f1.txt
+
+Client 4 received a message from Server 0, content of the packet is:
+Client 4 received a message from Server 2, content of the packet is:
+Server 0 done writing line [4,73] to file f1.txt
+
+Server 2 done writing line [4,73] to file f1.txt
+
+=== n_requested_requests = 5 ===
+=====Client 4 done all requests. request_all = 0 =====
+MKWCAS[f1.txt]: I'm releasing resource
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 4
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 0
+Client 4 received a message from Client 4, content of the packet is:
+Receive a distributed mutual exclusion algorithm message: 19 from Client 4
+MKWCAS[f1.txt]: I'm sending RELEASE to Client 1
+Client 4 received a message from Server 1, content of the packet is:
+Client 4 received a message from Server 0, content of the packet is:
+Client 4 received a message from Client 1, content of the packet is:
+Client 4 received a message from Client 2, content of the packet is:
+Client 4 received a message from Client 0, content of the packet is:
+Client 4 received a message from Client 3, content of the packet is:
+******Client 4's thread to handle Server 0's messages ends.
+Client 4 received a message from Server 2, content of the packet is:
+Client 4 received a message from Client 1, content of the packet is:
+******Client 4's thread to handle Server 1's messages ends.
+******Client 4's thread to handle Client 2's messages ends.
+******Client 4's thread to handle Client 3's messages ends.
+******Client 4's thread to handle Server 2's messages ends.
+MKWCAS[f1.txt]: I'm treating RELEASE message from Client 4
+{
+	packet.message_type = 19
+	packet.sender_id = 4
+	packet.receiver_id = 4
+	packet.timestamp = 8
+	packet.msg = 4#8
+}
+Client 4 received a message from Client 1, content of the packet is:
+******Client 4's thread to handle its self messages ends.
+Client 4 requests all requests. request_all = 1.
+******Client 4's thread to handle Client 1's messages ends.
+******Client 4's thread to handle Client 0's messages ends.
+
+Client 4 ends.

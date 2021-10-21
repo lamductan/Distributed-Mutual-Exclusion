@@ -1,0 +1,3 @@
+Node 0 starts.
+Node 2 starts.
+Node 1 starts.

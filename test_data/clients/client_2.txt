@@ -1,0 +1,5 @@
+write f2.txt
+write f1.txt
+read f1.txt 1
+read f1.txt 2
+read f2.txt 1

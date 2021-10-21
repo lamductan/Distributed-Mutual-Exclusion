@@ -1,0 +1,300 @@
+Listener at 127.0.0.1 on port 18566 
+New connection, socket fd is 7, ip is : 127.0.0.1, port : 58602
+Server 0, new client_id = 0, new client socket = 7
+Creating thread at server 0 to handle messages from client 0 at socket 7
+This thread is for Server 0 to handle messages from Client 0 at socket with sockfd = 7
+New connection, socket fd is 8, ip is : 127.0.0.1, port : 58608
+Server 0, new client_id = 1, new client socket = 8
+Creating thread at server 0 to handle messages from client 1 at socket 8
+This thread is for Server 0 to handle messages from Client 1 at socket with sockfd = 8
+New connection, socket fd is 9, ip is : 127.0.0.1, port : 58614
+Server 0, new client_id = 2, new client socket = 9
+Creating thread at server 0 to handle messages from client 2 at socket 9
+This thread is for Server 0 to handle messages from Client 2 at socket with sockfd = 9
+New connection, socket fd is 10, ip is : 127.0.0.1, port : 58620
+Server 0, new client_id = 3, new client socket = 10
+Creating thread at server 0 to handle messages from client 3 at socket 10
+This thread is for Server 0 to handle messages from Client 3 at socket with sockfd = 10
+New connection, socket fd is 11, ip is : 127.0.0.1, port : 58626
+Server 0, new client_id = 4, new client socket = 11
+Creating thread at server 0 to handle messages from client 4 at socket 11
+This thread is for Server 0 to handle messages from Client 4 at socket with sockfd = 11
+Received packet = {
+	packet.message_type = 3
+	packet.sender_id = 2
+	packet.receiver_id = 0
+	packet.timestamp = 10
+	packet.msg = Hello this is a text from client 2 to server 0
+}
+	Message from Client 2: Hello this is a text from client 2 to server 0
+===================================================
+Received packet = {
+	packet.message_type = 3
+	packet.sender_id = 3
+	packet.receiver_id = 0
+	packet.timestamp = 9
+	packet.msg = Hello this is a text from client 3 to server 0
+}
+Received packet = {
+	packet.message_type = 3
+	packet.sender_id = 1
+	packet.receiver_id = 0
+	packet.timestamp = 11
+	packet.msg = Hello this is a text from client 1 to server 0
+}
+Received packet = 	Message from Client 3: Hello this is a text from client 3 to server 0
+===================================================
+	Message from Client 1: Hello this is a text from client 1 to server 0
+===================================================
+Received packet = {
+	packet.message_type = 3
+	packet.sender_id = 0
+	packet.receiver_id = 0
+	packet.timestamp = 12
+	packet.msg = Hello this is a text from client 0 to server 0
+}
+	Message from Client 0: Hello this is a text from client 0 to server 0
+===================================================
+{
+	packet.message_type = 3
+	packet.sender_id = 4
+	packet.receiver_id = 0
+	packet.timestamp = 8
+	packet.msg = Hello this is a text from client 4 to server 0
+}
+	Message from Client 4: Hello this is a text from client 4 to server 0
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 2
+	packet.receiver_id = 0
+	packet.timestamp = 21
+	packet.msg = f2.txt#2,20
+}
+Server 0 is handling WRITE request from Client 2
+Content to write is: 2,20
+Server 0 done writing line [2,20] to file f2.txt
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 1
+	packet.receiver_id = 0
+	packet.timestamp = 24
+	packet.msg = f2.txt#1,23
+}
+Server 0 is handling WRITE request from Client 1
+Content to write is: 1,23
+Server 0 done writing line [1,23] to file f2.txt
+===================================================
+Received packet = {
+	packet.message_type = 1
+	packet.sender_id = 4
+	packet.receiver_id = 0
+	packet.timestamp = 21
+	packet.msg = f1.txt
+}
+Server 0 is handling READ request from Client 4, filename = f1.txt
+Server 0 handled READ request from Client 4, filename = f1.txt, response = This is f1 file.
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 3
+	packet.receiver_id = 0
+	packet.timestamp = 32
+	packet.msg = f2.txt#3,31
+}
+Server 0 is handling WRITE request from Client 3
+Content to write is: 3,31
+Server 0 done writing line [3,31] to file f2.txt
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 2
+	packet.receiver_id = 0
+	packet.timestamp = 36
+	packet.msg = f1.txt#2,35
+}
+Server 0 is handling WRITE request from Client 2
+Content to write is: 2,35
+Server 0 done writing line [2,35] to file f1.txt
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 3
+	packet.receiver_id = 0
+	packet.timestamp = 46
+	packet.msg = f2.txt#3,45
+}
+Server 0 is handling WRITE request from Client 3
+Content to write is: 3,45
+Server 0 done writing line [3,45] to file f2.txt
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 4
+	packet.receiver_id = 0
+	packet.timestamp = 37
+	packet.msg = f2.txt#4,36
+}
+Server 0 is handling WRITE request from Client 4
+Content to write is: 4,36
+Server 0 done writing line [4,36] to file f2.txt
+===================================================
+Received packet = {
+	packet.message_type = 1
+	packet.sender_id = 3
+	packet.receiver_id = 0
+	packet.timestamp = 58
+	packet.msg = f2.txt
+}
+Server 0 is handling READ request from Client 3, filename = f2.txt
+Server 0 handled READ request from Client 3, filename = f2.txt, response = 4,36
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 0
+	packet.receiver_id = 0
+	packet.timestamp = 49
+	packet.msg = f1.txt#0,48
+}
+Server 0 is handling WRITE request from Client 0
+Content to write is: 0,48
+Server 0 done writing line [0,48] to file f1.txt
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 3
+	packet.receiver_id = 0
+	packet.timestamp = 67
+	packet.msg = f2.txt#3,66
+}
+Server 0 is handling WRITE request from Client 3
+Content to write is: 3,66
+Server 0 done writing line [3,66] to file f2.txt
+===================================================
+Received packet = {
+	packet.message_type = 1
+	packet.sender_id = 1
+	packet.receiver_id = 0
+	packet.timestamp = 52
+	packet.msg = f1.txt
+}
+Received packet = {
+	packet.message_type = 10
+	packet.sender_id = 3
+	packet.receiver_id = 0
+	packet.timestamp = 70
+	packet.msg = 
+}
+===================================================
+Server 0 is handling READ request from Client 1, filename = f1.txt
+Server 0 handled READ request from Client 1, filename = f1.txt, response = 0,48
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 0
+	packet.receiver_id = 0
+	packet.timestamp = 64
+	packet.msg = f2.txt#0,63
+}
+Server 0 is handling WRITE request from Client 0
+Content to write is: 0,63
+Server 0 done writing line [0,63] to file f2.txt
+===================================================
+Received packet = {
+	packet.message_type = 10
+	packet.sender_id = 2
+	packet.receiver_id = 0
+	packet.timestamp = 73
+	packet.msg = 
+}
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 4
+	packet.receiver_id = 0
+	packet.timestamp = 55
+	packet.msg = f1.txt#4,54
+}
+Server 0 is handling WRITE request from Client 4
+Content to write is: 4,54
+Server 0 done writing line [4,54] to file f1.txt
+===================================================
+Received packet = {
+	packet.message_type = 1
+	packet.sender_id = 0
+	packet.receiver_id = 0
+	packet.timestamp = 76
+	packet.msg = f1.txt
+}
+Server 0 is handling READ request from Client 0, filename = f1.txt
+Server 0 handled READ request from Client 0, filename = f1.txt, response = 4,54
+===================================================
+Received packet = {
+	packet.message_type = 10
+	packet.sender_id = 0
+	packet.receiver_id = 0
+	packet.timestamp = 77
+	packet.msg = 
+}
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 1
+	packet.receiver_id = 0
+	packet.timestamp = 66
+	packet.msg = f1.txt#1,65
+}
+Server 0 is handling WRITE request from Client 1
+Content to write is: 1,65
+Server 0 done writing line [1,65] to file f1.txt
+===================================================
+Received packet = {
+	packet.message_type = 1
+	packet.sender_id = 4
+	packet.receiver_id = 0
+	packet.timestamp = 65
+	packet.msg = f1.txt
+}
+Server 0 is handling READ request from Client 4, filename = f1.txt
+Server 0 handled READ request from Client 4, filename = f1.txt, response = 1,65
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 1
+	packet.receiver_id = 0
+	packet.timestamp = 80
+	packet.msg = f1.txt#1,79
+}
+Server 0 is handling WRITE request from Client 1
+Content to write is: 1,79
+Server 0 done writing line [1,79] to file f1.txt
+===================================================
+Received packet = {
+	packet.message_type = 10
+	packet.sender_id = 1
+	packet.receiver_id = 0
+	packet.timestamp = 83
+	packet.msg = 
+}
+===================================================
+Received packet = {
+	packet.message_type = 2
+	packet.sender_id = 4
+	packet.receiver_id = 0
+	packet.timestamp = 74
+	packet.msg = f1.txt#4,73
+}
+Server 0 is handling WRITE request from Client 4
+Content to write is: 4,73
+Server 0 done writing line [4,73] to file f1.txt
+===================================================
+Received packet = {
+	packet.message_type = 10
+	packet.sender_id = 4
+	packet.receiver_id = 0
+	packet.timestamp = 77
+	packet.msg = 
+}
+===================================================
+All clients done all requests. SERVER_RECEIVED_ALL_DONE_REQUESTS are sent.
